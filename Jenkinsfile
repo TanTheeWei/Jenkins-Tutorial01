@@ -1,12 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Pre_Build') {
-      steps {
-        echo 'Pre-Build Message'
-      }
-    }
-
     stage('Build') {
       steps {
         echo 'Build Message'
@@ -15,13 +9,19 @@ pipeline {
 
     stage('Test') {
       steps {
-        echo 'Test Message'
+        echo 'Test Code'
       }
     }
 
     stage('Deploy') {
       steps {
         echo 'Deploy Message'
+      }
+    }
+
+    stage('Post-Deployment-Test') {
+      steps {
+        echo 'PostDeploymentTest00'
       }
     }
 
